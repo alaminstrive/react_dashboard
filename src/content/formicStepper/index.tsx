@@ -1,21 +1,23 @@
 import { Helmet } from 'react-helmet-async';
-import PageHeader from './StepperHeader';
 import PageTitleWrapper from 'src/components/PageTitleWrapper';
 import { Grid, Container } from '@mui/material';
 import Footer from 'src/components/Footer';
-
-import MyForm from './MyForm';
-
+import { Formik, Form, Field, FormikState, FormikHelpers } from "formik";
 
 
-function MyStepper() {
+function formicStepper() {
   return (
     <>
       <Helmet>
         <title>Stepper  - Form</title>
       </Helmet>
       <PageTitleWrapper>
-        <PageHeader />
+        <Grid display="flex"
+              justifyContent="center"
+              alignItems="center"
+              >
+        <h1>Header</h1>
+        </Grid>
       </PageTitleWrapper>
 
       <Container maxWidth="lg">
@@ -26,7 +28,7 @@ function MyStepper() {
           justifyContent="center"
           spacing={3}>
           <Grid item xs={12} >
-            <MyForm />
+          <h1> Content </h1>
           </Grid>
         </Grid>
       </Container>
@@ -35,4 +37,4 @@ function MyStepper() {
   )
 }
 
-export default MyStepper
+export default formicStepper

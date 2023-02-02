@@ -8,6 +8,8 @@ type Address = {
   state: string
   zip: string
 }
+
+
 type AddressData = {
   street: string
   city: string

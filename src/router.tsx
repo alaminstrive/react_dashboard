@@ -25,6 +25,8 @@ const Crypto = Loader(lazy(() => import('src/content/dashboards/Crypto')));
 
 const Stepper = Loader(lazy(() => import('src/content/stepper')));
 
+const FormicStepper = Loader(lazy(() => import('src/content/formicStepper')));
+
 
 // Applications
 
@@ -159,6 +161,23 @@ const routes: RouteObject[] = [
       
     ]
   },
+
+  {
+    path: 'formicStepper',
+    element: <SidebarLayout />,
+    children: [
+      {
+        path: '',
+        element: <Navigate to="formicStepper" replace />
+      },
+      {
+        path: 'formicStepper',
+        element: <FormicStepper />
+      }
+      
+    ]
+  },
+
 
 
 

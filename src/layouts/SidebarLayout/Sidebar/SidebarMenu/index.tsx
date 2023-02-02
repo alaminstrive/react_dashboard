@@ -233,7 +233,7 @@ function SidebarMenu() {
           </SubMenuWrapper>
         </List>
 
-
+          {/* sidebar option start form  here */}
         <List
           component="div"
           subheader={
@@ -244,6 +244,7 @@ function SidebarMenu() {
         >
           <SubMenuWrapper>
             <List component="div">
+
               <ListItem component="div">
                 <Button
                   disableRipple
@@ -255,9 +256,27 @@ function SidebarMenu() {
                   Stepper
                 </Button>
               </ListItem>
+
+              <ListItem component="div">
+                <Button
+                  disableRipple
+                  component={RouterLink}
+                  onClick={closeSidebar}
+                  to="/formicStepper"
+                  startIcon={<TableChartTwoToneIcon />}
+                >
+                  Formic Stepper
+                </Button>
+              </ListItem>
+
             </List>
           </SubMenuWrapper>
         </List>
+
+
+
+
+
 
 
         
